@@ -12,9 +12,35 @@
         <MicaBackdrop/>
     </Window.SystemBackdrop>
 
-    <NavigationView>
+    <NavigationView SelectionChanged="SelectionChangeHandler">
         <NavigationView.MenuItems>
-            <NavigationViewItem Icon="Home" Content="Домашняя страница" Tag="Home"/>
+            <NavigationViewItem Content="Дашбоард" Tag="Dashboard">
+                <NavigationViewItem.Icon>
+                    <ImageIcon>
+                        <ImageIcon.Source>
+                            <SvgImageSource UriSource="ms-appx:///Icons/Dashboard.svg"/>
+                        </ImageIcon.Source>
+                    </ImageIcon>
+                </NavigationViewItem.Icon>
+            </NavigationViewItem>
+            <NavigationViewItem Content="Кошельки" Tag="Wallets">
+                <NavigationViewItem.Icon>
+                    <ImageIcon>
+                        <ImageIcon.Source>
+                            <SvgImageSource UriSource="ms-appx:///Icons/Wallet.svg"/>
+                        </ImageIcon.Source>
+                    </ImageIcon>
+                </NavigationViewItem.Icon>
+            </NavigationViewItem>
+            <NavigationViewItem Content="Токены" Tag="Tokens">
+                <NavigationViewItem.Icon>
+                    <ImageIcon>
+                        <ImageIcon.Source>
+                            <SvgImageSource UriSource="ms-appx:///Icons/Dollar.svg"/>
+                        </ImageIcon.Source>
+                    </ImageIcon>
+                </NavigationViewItem.Icon>
+            </NavigationViewItem>
         </NavigationView.MenuItems>
 
         <Frame Name="rootFrame"/>

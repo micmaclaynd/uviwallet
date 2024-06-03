@@ -10,6 +10,25 @@
     <RuntimeIdentifiers Condition="$([MSBuild]::GetTargetFrameworkVersion('$(TargetFramework)')) &lt; 8">win10-x86;win10-x64;win10-arm64</RuntimeIdentifiers>
     <UseWinUI>true</UseWinUI>
   </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Icons\Dashboard.svg" />
+    <None Remove="Icons\Dollar.svg" />
+    <None Remove="Icons\Wallet.svg" />
+    <None Remove="Pages\DashboardPage.xaml" />
+    <None Remove="Pages\TokensPage.xaml" />
+    <None Remove="Pages\WalletsPage.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icons\Dashboard.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Dollar.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Wallet.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.22621.756" />
@@ -19,5 +38,23 @@
 
   <ItemGroup>
     <Folder Include="Windows\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Pages\WalletsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Pages\TokensPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Pages\DashboardPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
 </Project>
