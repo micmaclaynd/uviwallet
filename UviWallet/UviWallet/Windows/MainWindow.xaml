@@ -7,4 +7,12 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
+
+    <NavigationView>
+        <NavigationView.MenuItems>
+            <NavigationViewItem Icon="Home" Content="Домашняя страница" Tag="Home"/>
+        </NavigationView.MenuItems>
+
+        <Frame Name="rootFrame"/>
+    </NavigationView>
 </Window>
