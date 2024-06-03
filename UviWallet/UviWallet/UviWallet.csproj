@@ -16,4 +16,8 @@
     <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.5.240428000" />
     <Manifest Include="$(ApplicationManifest)" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Windows\" />
+  </ItemGroup>
 </Project>
