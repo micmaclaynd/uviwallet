@@ -12,7 +12,7 @@
         <MicaBackdrop/>
     </Window.SystemBackdrop>
 
-    <NavigationView SelectionChanged="SelectionChangeHandler">
+    <NavigationView Name="rootNavigationView" SelectionChanged="SelectionChangeHandler">
         <NavigationView.MenuItems>
             <NavigationViewItem Content="Дашбоард" Tag="Dashboard">
                 <NavigationViewItem.Icon>
