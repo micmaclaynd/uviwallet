@@ -7,26 +7,33 @@ namespace UviWallet.Services {
         public static NavigationView RootNavigationView { get; set; }
 
         public static void Navigate(string tag) {
-            foreach (var menuItem in RootNavigationView.MenuItems) {
-                var navigationViewItem = menuItem as NavigationViewItem;
+            if (tag == "Settings") {
+                RootFrame.Navigate(typeof(SettingsPage));
+                RootNavigationView.SelectedItem = RootNavigationView.SettingsItem;
+            } else {
+                foreach (var menuItem in RootNavigationView.MenuItems) {
+                    var navigationViewItem = menuItem as NavigationViewItem;
 
-                if (navigationViewItem.Tag.ToString() == tag) {
-                    RootNavigationView.SelectedItem = menuItem;
+                    if (navigationViewItem.Tag.ToString() == tag) {
+                        RootNavigationView.SelectedItem = menuItem;
 
-                    switch (tag) {
-                        case "Dashboard": {
-                            RootFrame.Navigate(typeof(DashboardPage));
-                            break;
-                        } case "Wallets": {
-                            RootFrame.Navigate(typeof(WalletsPage));
-                            break;
-                        } case "Tokens": {
-                            RootFrame.Navigate(typeof(TokensPage));
-                            break;
+                        switch (tag) {
+                            case "Dashboard": {
+                                RootFrame.Navigate(typeof(DashboardPage));
+                                break;
+                            }
+                            case "Wallets": {
+                                RootFrame.Navigate(typeof(WalletsPage));
+                                break;
+                            }
+                            case "Tokens": {
+                                RootFrame.Navigate(typeof(TokensPage));
+                                break;
+                            }
                         }
-                    }
 
-                    break;
+                        break;
+                    }
                 }
             }
         }
