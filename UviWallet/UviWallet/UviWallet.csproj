@@ -15,6 +15,7 @@
     <None Remove="Icons\Dollar.svg" />
     <None Remove="Icons\Wallet.svg" />
     <None Remove="Pages\DashboardPage.xaml" />
+    <None Remove="Pages\SettingsPage.xaml" />
     <None Remove="Pages\TokensPage.xaml" />
     <None Remove="Pages\WalletsPage.xaml" />
   </ItemGroup>
@@ -38,6 +39,12 @@
 
   <ItemGroup>
     <Folder Include="Windows\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Pages\SettingsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
 
   <ItemGroup>
